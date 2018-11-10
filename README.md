@@ -4,6 +4,8 @@ Summary
 
 Veil helps you ignore your inner editor (can't edit what you can't see!) and hides your prose from prying or innocent eyes.
 
+![image](https://user-images.githubusercontent.com/44929610/48305022-e5fd5100-e523-11e8-997d-c5e733743f84.png)
+
 Installation
 ------------
 
