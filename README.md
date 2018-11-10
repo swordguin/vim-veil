@@ -12,6 +12,7 @@ Use your favorite plugin manager.
 - [vim-plug](https://github.com/junegunn/vim-plug)
   1. Add `Plug 'swordguin/vim-veil'` to .vimrc
   2. Run `:PlugInstall`
+  3. Map a key (see below)
 
 Usage
 -----
@@ -25,20 +26,20 @@ Configuration
 Define a key with something like this in your .vimrc:
 
 ```vim
-	nmap <F12> <Plug>Veil
+nmap <F12> <Plug>Veil
 ```
 
 You may define a custom color:
->
-	let g:veilcolor="black"
-<
+```vim
+let g:veilcolor="black"
+```
 
 Compatibility
 -------------
 
 Works with Goyo.vim, vim-markdown. Hides french accented letters.
 
-License 
+License
 -------
 
 GNU GPLv3
