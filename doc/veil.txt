@@ -1,0 +1,20 @@
+*veil.txt* Text concealer
+
+License: GNU GPLv3
+
+SUMMARY                        *veil*
+
+Veil helps you ignore your inner editor (can't edit what you can't see!) and hides your prose from prying or innocent eyes.
+
+Define a key with something like this in your .vimrc:
+>
+	nmap <F12> <Plug>Veil
+<
+
+You may define a custom color:
+>
+	let g:veilcolor="black"
+<
+
+
+vim:tw=78:et:ft=help:norl:
