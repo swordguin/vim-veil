@@ -13,7 +13,7 @@ function! s:Veil()
         let g:veiltoggle=0
     else " hide
         setlocal syntax=text
-        syn match veil '[a-zA-ZçÇâÂàÀéÉêÊèÈîÎôÔûÛùÙ]\zs[a-zA-Zçâàéèêîôûù]\+'
+        syn match veil '[a-zA-ZçÇâÂàÀéÉêÊèÈîÎôÔûÛùÙœ]\zs[a-zA-Zçäâàëéèêîïôöûüùœ]\+'
         exe "hi veil ctermbg=" . g:veilcolor . " ctermfg=". g:veilcolor
         exe "hi veil guibg=" . g:veilcolor . " guifg=". g:veilcolor
         let g:veiltoggle=1
