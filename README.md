@@ -31,11 +31,6 @@ Define a key with something like this in your .vimrc:
 nmap <F12> <Plug>Veil
 ```
 
-You may define a custom color:
-```vim
-let g:veilcolor="black"
-```
-
 Compatibility
 -------------
 
