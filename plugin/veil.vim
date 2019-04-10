@@ -4,9 +4,17 @@ endif
 let g:loaded_veil = 1
 
 let g:veiltoggle=0
-let g:veilcolor="gray"
+
+function! GetHiColor(group, term)
+   let output = execute('hi ' . a:group)
+   return matchstr(output, a:term.'=\zs\S*')
+endfunction
+
 
 function! s:Veil()
+    let g:veilcolorc=GetHiColor('Comment', 'ctermfg')
+    let g:veilcolorg=GetHiColor('Comment', 'guifg')
+
     if g:veiltoggle " unhide
         setlocal syntax< " restore old syntax
         syn clear veil
@@ -14,8 +22,8 @@ function! s:Veil()
     else " hide
         setlocal syntax=text
         syn match veil '[a-zA-ZçÇâÂàÀéÉêÊèÈîÎôÔûÛùÙœ]\zs[a-zA-Zçäâàëéèêîïôöûüùœ]\+'
-        exe "hi veil ctermbg=" . g:veilcolor . " ctermfg=". g:veilcolor
-        exe "hi veil guibg=" . g:veilcolor . " guifg=". g:veilcolor
+        exe "hi veil ctermbg=" . g:veilcolorc . " ctermfg=". g:veilcolorc
+        exe "hi veil guibg=" . g:veilcolorg . " guifg=". g:veilcolorg
         let g:veiltoggle=1
     endif
 endfunction
