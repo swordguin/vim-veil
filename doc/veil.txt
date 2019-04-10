@@ -11,10 +11,5 @@ Define a key with something like this in your .vimrc:
 	nmap <F12> <Plug>Veil
 <
 
-You may define a custom color:
->
-	let g:veilcolor="black"
-<
-
 
 vim:tw=78:et:ft=help:norl:
